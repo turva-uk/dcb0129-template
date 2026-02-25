@@ -1,8 +1,8 @@
 # Key metadata about the site
-site_name: "Digital Clinical Safety Alliance"
+site_name: "DCB0129 Clinical Safety Management File Template"
 site_description: "A template for creating clinical safety management files"
-site_author: "Digital Clinical Safety Alliance Team"
-site_url: "https://www.digital-clinical-safety-alliance.org"
+site_author: "Turva"
+site_url: "https://turva.org"
 
 # Zensical processes files in this folder into a HTML site
 docs_dir: clinical-safety-management-file
@@ -35,11 +35,11 @@ nav:
 
 # theme settings, fonts, colours
 theme:
-  name: material
-  variant: classic
+  # variant: classic # Zensical's 'Material for MkDocs' look
+  variant: modern # Zensical's default theme
 
   # replace these path or the contents of the files to change the logo and favicon
-  logo: _assets/_images/logo.png
+  logo: _assets/_images/turva-transparent.svg
   favicon: _assets/_images/favicon.png
 
   features:
@@ -130,10 +130,6 @@ markdown_extensions:
   - pymdownx.superfences
   - toc:
       permalink: true
-
-# set extra CSS file
-extra_css:
-  - _assets/_stylesheets/extra.css
 
 # Placeholder variables for {{ macros }} are set here
 extra:
