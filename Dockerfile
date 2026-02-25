@@ -6,7 +6,7 @@ FROM python:3.12-bookworm
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
-# Extra packages required for Material for MkDocs plugins (dependency for git and pdf plugins)
+# Extra packages required for Zensical plugins (dependency for git and pdf plugins)
 RUN apt-get update &&\
     apt install -y python3-cffi python3-brotli libpango-1.0-0 libpangoft2-1.0-0
 
@@ -29,4 +29,3 @@ WORKDIR /app/
 # Copy application code into image
 # (Excludes any files/dirs matched by patterns in .dockerignore)
 COPY . /app/
-

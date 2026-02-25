@@ -5,8 +5,8 @@
 ## Features
 
 - **DCB0129 Documents** - Automatic generation of a skeletal set of clinical safety documents to be reviewed fully, and customised for the use-case.
-- **Documentation Website** - Repo is with a ready-configured Material for MkDocs website to show your clinical safety documents openly.
-- **GitHub Pages** - Automatic build and deploy of the MkDocs site as a GitHub Pages site (via GitHub Actions)
+- **Documentation Website** - Repo is with a ready-configured Zensical website to show your clinical safety documents openly.
+- **GitHub Pages** - Automatic build and deploy of the Zensical site as a GitHub Pages site (via GitHub Actions)
 - **PDF Export** - Automatic generation of a PDF version of the complete site, for organisations who would prefer to have an 'offline' document.
 - **Hazard Log** - GitHub Action to generate standard DCB0129-compatible Labels for Hazard Severity and Likelihood, as well as overall Risk level.
 
@@ -49,13 +49,13 @@ Push local changes to the remote
 
 ### View the site locally for development
 
-Install Material for MkDocs if not already installed
-`pip install mkdocs-material`
+Install Zensical if not already installed
+`pip install zensical`
 
 View the site with the command
-`mkdocs serve`
+`zensical serve`
 
-> Note that `mkdocs serve` will FAIL unless you have **already pushed the site code to the GitHub repo at least once**, because the `git-committers` plugin included in the site configuration won't be able to access any commits in the repo. (The error will be something like `raise InvalidGitRepositoryError()`)
+> Note that `zensical serve` will FAIL unless you have **already pushed the site code to the GitHub repo at least once**, because the `git-committers` plugin included in the site configuration won't be able to access any commits in the repo. (The error will be something like `raise InvalidGitRepositoryError()`)
 
 ### Creating the standard palette of Hazard Log labels
 
@@ -63,7 +63,7 @@ Once the repo is pushed to GitHub, a GitHub Action will have been created which 
 
 To make this happen is a one-time task in GitHub. Navigate to your GitHub repository, go to the Actions tab, and select 'create-hazard-log-labels' from the right sidebar. Over on the right of the page is a button labelled 'Run workflow', click this and the labels will be created. All other labels will be removed, but you can easily add any other custom labels you need later in the Labels UI.
 
-### Enabling the built-in Material for MkDocs website
+### Enabling the built-in Zensical website
 
 Go into GitHub's repository settings and enable GitHub Pages for your repository (This only works with public repos unless you have a paid plan). Enable GitHub Pages to build from the `gh-pages` branch of your repository.
 
@@ -95,7 +95,7 @@ When the website is pushed to GitHub, a PDF rendering of the entire site is crea
 Since the PDF render takes time (around 15 seconds for a small site, longer for a larger site) by default the PDF rendering is disabled when developing locally. If you need to enable the PDF render because you want to test the PDF locally, then you can enable it like this:
 
 ```console
-export ENABLE_PDF_EXPORT=1;mkdocs serve
+export ENABLE_PDF_EXPORT=1;zensical serve
 ```
 
 PDF rendering is enabled by default in the GitHub Action which builds the site on GitHub pages.

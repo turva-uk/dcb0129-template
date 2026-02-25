@@ -4,18 +4,18 @@ site_description: "A template for creating clinical safety management files"
 site_author: "Digital Clinical Safety Alliance Team"
 site_url: "https://www.digital-clinical-safety-alliance.org"
 
-# MkDocs processes files in this folder into a HTML site
+# Zensical processes files in this folder into a HTML site
 docs_dir: clinical-safety-management-file
 
 # Copyright information which is shown in the footer
-copyright: "Copyright &copy; 2025"
+copyright: "Copyright &copy; 2026 Turva & Koloki Ltd - CC-BY-SA"
 
 # these lines configure the 'GitHub repo' widget on the top right
 repo_url: "https://github.com/clinicians-who-code/clinical-safety-hazard-documentation"
 repo_name: "clinical-safety-hazard-documentation"
 edit_uri: blob/main/clinical-safety-management-file
 
-# `mkdocs serve` serves the docs locally on this (arbitrarily chosen) port
+# `zensical serve` serves the docs locally on this (arbitrarily chosen) port
 dev_addr: "0.0.0.0:8001"
 
 # Navigation structure
@@ -36,6 +36,7 @@ nav:
 # theme settings, fonts, colours
 theme:
   name: material
+  variant: classic
 
   # replace these path or the contents of the files to change the logo and favicon
   logo: _assets/_images/logo.png
@@ -69,12 +70,12 @@ theme:
   font:
     code: Roboto Mono
 
-# mkdocs plugins
+# zensical plugins
 plugins:
   - git-committers:
       repository: "**REPOSITORY_URL**"
       branch: main
-      enabled:  false # makes Git Committers optional
+      enabled: false # makes Git Committers optional
   - git-revision-date-localized:
       enable_creation_date: true
   - macros
@@ -106,8 +107,8 @@ plugins:
       #render_js: true
       #headless_chrome_path: headless-chromium
       #
-      # output_path: 
-      # enabled_if_env: 
+      # output_path:
+      # enabled_if_env:
       #
       #debug_html: true
       #show_anchors: true
@@ -119,8 +120,8 @@ markdown_extensions:
   - admonition
   - attr_list
   - pymdownx.emoji:
-      emoji_generator: !!python/name:materialx.emoji.to_svg
-      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_index: !!python/name:zensical.extensions.emoji.twemoji
+      emoji_generator: !!python/name:zensical.extensions.emoji.to_svg
   - pymdownx.highlight
   - pymdownx.inlinehilite
   - pymdownx.keys
@@ -158,4 +159,3 @@ extra:
   site_description: "A template for creating clinical safety management files"
   site_name: "Digital Clinical Safety Alliance"
   site_url: "https://www.digital-clinical-safety-alliance.org"
-

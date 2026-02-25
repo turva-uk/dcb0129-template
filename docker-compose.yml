@@ -1,12 +1,11 @@
 services:
 
-  # mkdocs - documentation
+  # zensical - documentation
   mkdocs:
     build: .
     ports:
-      - 8024:8001 # port mapping for the mkdocs serve command
-    command: mkdocs serve
+      - 8024:8001 # port mapping for the zensical serve command
+    command: zensical serve
     restart: always
     volumes:
       - .:/app/
-
